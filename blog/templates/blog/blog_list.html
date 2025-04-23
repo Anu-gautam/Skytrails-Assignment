@@ -1,0 +1,6 @@
+{% for blog in blogs %}
+<div class="p-4 bg-white shadow rounded mb-4">
+    <h2 class="text-xl font-bold"><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
+    <p class="text-gray-600">by {{ blog.author.username }} | {{ blog.created_at }}</p>
+</div>
+{% endfor %}
